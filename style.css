@@ -1,85 +1,71 @@
-/* 重置預設內外距，設定盒模型和基礎樣式 */
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
 * {
   box-sizing: border-box;
-}
-body {
-  /* 背景：黑色遮罩＋用戶提供的背景圖片（請替換 '背景圖片.jpg' 為實際檔案路徑） */
-  background: #000 url('img/background.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: #fff;
   font-family: sans-serif;
-  animation: borderAnimate 10s linear infinite;
-  min-height: 100dvh;                  /* 佔滿螢幕高度 */
-  max-height: 100dvh;
+  margin: 0px;
+  padding: 0px;
 }
 
-/* 主要容器：置中對齊內容，適應行動裝置與桌面 */
 .container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-}
+  animation: borderAnimate 10s linear infinite;
+  height: 100dvh;
 
-/* Logo 圖片樣式：限制最大寬度並加入進場動畫 */
-.logo {
-  max-width: 80%;
-  height: auto;
-  margin-bottom: 20px;
-  animation: fadeDown 1s ease-out;
-}
+  .hero{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background: #000 url('img/background.jpg') no-repeat center center fixed;
+    background-size: cover;
 
-/* 簡介文字區塊樣式（字體大小可依需求調整） */
-#introText {
-  font-size: 2em;
-  margin: 10px 0;
-}
+    /* Logo 圖片樣式：限制最大寬度並加入進場動畫 */
+    .logo {
+      max-width: 80%;
+      height: auto;
+      margin-bottom: 20px;
+      animation: fadeDown 1s ease-out;
+      border-radius: 50px;
+    }
 
-/* Discord 按鈕樣式：外觀與過場效果 */
-#discordButton {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 24px;
-  font-size: 1.1em;
-  color: #fff;
-  background-color: #5865f2;       /* Discord 品牌主色調 */
-  text-decoration: none;
-  border: none;
-  border-radius: 5px;
-  opacity: 0;                     /* 初始隱藏（透明） */
-  transition: background-color 0.3s, opacity 0.5s;
-}
-#discordButton:hover {
-  background-color: #6e78ff;      /* 懸停時變色 */
-  cursor: pointer;
-}
+    /* 簡介文字區塊樣式（字體大小可依需求調整） */
+    #introText {
+      font-size: 32px;
+      margin: 10px 0;
+      color: #fff;
+    }
 
-/* RGB 燈條邊框動畫（循環漸變顏色） */
-@keyframes borderAnimate {
-  0% {
-    border-image-source: linear-gradient(0deg, red, yellow, lime, cyan, blue, magenta, red);
-  }
-  100% {
-    border-image-source: linear-gradient(360deg, red, yellow, lime, cyan, blue, magenta, red);
-  }
-}
+    /* Discord 按鈕樣式：外觀與過場效果 */
+    #discordButton {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 1.1em;
+      color: #fff;
+      background-color: #5865f2;       /* Discord 品牌主色調 */
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      opacity: 0;                     /* 初始隱藏（透明） */
+      transition: background-color 0.3s, opacity 0.5s;
+    }
+    #discordButton:hover {
+      background-color: #6e78ff;      /* 懸停時變色 */
+      cursor: pointer;
+    }
 
-/* 進場動畫：自上而下淡入 */
-@keyframes fadeDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+    /* 進場動畫：自上而下淡入 */
+    @keyframes fadeDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
   }
 }
