@@ -9,7 +9,7 @@ html, body {
   }
   body {
     /* 背景：黑色遮罩＋用戶提供的背景圖片（請替換 '背景圖片.jpg' 為實際檔案路徑） */
-    background: #000 url('/img/background.jpg') no-repeat center center fixed;
+    background: #000 url('img/background.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #fff;
     font-family: sans-serif;
